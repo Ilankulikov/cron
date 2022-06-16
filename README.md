@@ -4,7 +4,7 @@ __Im assuming that in the first place there are files in S3__
 
     git clone https://github.com/Ilankulikov/cron.git
     
-set environment variabl with the web repo url or se it manually in install_dependencies.sh
+set environment variable with the web repo url or se it manually in install_dependencies.sh
 
     export WEB_REPO_PATH=<web repository url> # or set it manually
  
@@ -18,7 +18,6 @@ set aws configure
 
     aws configure
   
-==============================================================
   
 ## in cronjob.py
   
@@ -28,8 +27,13 @@ repo_path,file_path - only the USER should be modified if needed
 
 ##
 
-run 'crontab -e' and add the following line to the end of file:
 
-    */1 * * * *  /home/ubuntu/cron/cronjob_project/bin/python /home/ubuntu/cron/cronjob.py 2>&1
+run 
+
+        crontab -e
+        
+and add the following line to the end of file:
+
+    */1 * * * *  /home/ubuntu/cron/cronjob_project/bin/python /home/ubuntu/cron/cronjob.py >/dev/null 2>&1
     
 this command will check for new commits every 1 minutes.
