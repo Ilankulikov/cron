@@ -1,0 +1,15 @@
+awscli==1.25.9
+botocore==1.27.9
+colorama==0.4.4
+docutils==0.16
+gitdb==4.0.9
+GitPython==3.1.27
+jmespath==1.0.0
+pyasn1==0.4.8
+python-dateutil==2.8.2
+PyYAML==5.4.1
+rsa==4.7.2
+s3transfer==0.6.0
+six==1.16.0
+smmap==5.0.0
+urllib3==1.26.9
